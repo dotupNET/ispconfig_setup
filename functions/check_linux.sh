@@ -118,8 +118,11 @@ CheckLinux() {
 		
 		elif echo "$VERSION_ID" | grep -iq "9"; then
 			DISTRO=debian9
+
+		elif echo "$VERSION_ID" | grep -iq "10"; then
+			DISTRO=debian10
 		fi
-	
+		
 	elif echo "$ID" | grep -iq "ubuntu"; then
 	
 		#---------------------------------------------------------------------
