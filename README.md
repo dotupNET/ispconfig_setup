@@ -621,7 +621,7 @@ Run the following command:
 * Debian/Raspbian 7, 8 and 9 and Ubuntu 14.04, 15.10, 16.04, 16.10 and 18.04
 
 ```shell
-cd /tmp; wget -O installer.tgz "https://github.com/servisys/ispconfig_setup/tarball/master"; tar zxvf installer.tgz; cd *ispconfig*; sudo bash install.sh
+cd /tmp; wget -O installer.tgz "https://github.com/dotupNET/ispconfig_setup/tarball/master"; tar zxvf installer.tgz; cd *ispconfig*; sudo bash install.sh
 ```
 * CentOS 7
 
