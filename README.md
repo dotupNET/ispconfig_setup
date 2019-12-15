@@ -1,5 +1,26 @@
 [![Build Status](https://travis-ci.org/servisys/ispconfig_setup.svg?branch=master)](https://travis-ci.org/servisys/ispconfig_setup)
 
+# TCP Ports #
+                20      - FTP
+                21      - FTP
+                22      - SSH/SFTP
+                25      - Mail (SMTP)
+                53      - DNS
+                80      - Web (HTTP)
+                110     - Mail (POP3)
+                143     - Mail (IMAP)
+                443     - Web (HTTPS)
+                465     - Mail (SMTPS)
+                587     - Mail (SMTP)
+                993     - Mail (IMAPS)
+                995     - Mail (POP3S)
+                3306    - Database
+                5222    - Chat (XMPP)
+                8080    - ISPConfig
+                8081    - ISPConfig
+                10000   - ISPConfig
+
+
 # README #
 
 [![PayPayl donate button](https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TB4Q3UJDC5JDJ "Help US support this project using Paypal")

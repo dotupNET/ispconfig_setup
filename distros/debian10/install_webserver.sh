@@ -16,7 +16,7 @@ InstallWebServer() {
     echo -n "Installing PHP and modules... "
     # Need to check if soemthing is asked before suppress messages
     # apt_install php7.3 php7.3-common php7.3-gd php7.3-mysql php7.3-imap php7.3-cli php7.3-cgi php-pear  php7.3-curl php7.3-intl php7.3-pspell php7.3-recode php7.3-sqlite3 php7.3-tidy php7.3-xmlrpc php7.3-zip php7.3-mbstring php7.3-imap mcrypt php7.3-snmp php7.3-xmlrpc php7.3-xsl
-    apt_install php php-common php-gd php-mysql php-imap php-cli php-cgi php-pear php-curl php-intl php-pspell php-recode php-sqlite3 php-tidy php-xmlrpc php-xsl php-zip php-mbstring php-soap
+    apt_install php php-common php-gd php-mysql php-imap php-cli php-cgi php-pear php-curl php-intl php-pspell php-recode php-sqlite3 php-tidy php-xmlrpc php-zip php-mbstring php-soap
     echo -e "[${green}DONE${NC}]\n"
     echo -n "Installing PHP-FPM... "
     #Need to check if soemthing is asked before suppress messages
