@@ -79,7 +79,7 @@ InstallWebServer() {
     echo -e "[${green}DONE${NC}]\n"
 
     echo -n "Installing PHP Opcode Cache... "
-    apt_install php-opcache php-apcu
+    apt_install  php7.3-opcache php7.3-apcu
     echo -e "[${green}DONE${NC}]\n"
     echo -n "Restarting Apache... "
     systemctl restart apache2
