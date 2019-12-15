@@ -6,16 +6,16 @@ InstallWebmail() {
   case $CFG_WEBMAIL in
 	"roundcube")
 	  echo -n "Installing Webmail client (Roundcube)... "
-	  echo "CREATE DATABASE roundcube;" | mysql --defaults-file=/etc/mysql/debian.cnf
-	  CFG_ROUNDCUBE_PWD=$(< /dev/urandom tr -dc A-Z-a-z-0-9 | head -c12)
-	  echo "roundcube-core roundcube/dbconfig-install boolean true" | debconf-set-selections
-	  echo "roundcube-core roundcube/database-type select mysql" | debconf-set-selections
-	  echo "roundcube-core roundcube/mysql/admin-pass password $CFG_MYSQL_ROOT_PWD" | debconf-set-selections
-	  echo "roundcube-core roundcube/db/dbname string roundcube" | debconf-set-selections
-	  echo "roundcube-core roundcube/mysql/app-pass password $CFG_ROUNDCUBE_PWD" | debconf-set-selections
-	  echo "roundcube-core roundcube/app-password-confirm password $CFG_ROUNDCUBE_PWD" | debconf-set-selections
-	  echo "roundcube-core roundcube/hosts string localhost" | debconf-set-selections
-	  apt_install roundcube roundcube-core roundcube-mysql roundcube-plugins
+	  # echo "CREATE DATABASE roundcube;" | mysql --defaults-file=/etc/mysql/debian.cnf
+	  CFG_ROUNDCUBE_PWD=$CFG_MYSQL_ROOT_PWD;
+	  # echo "roundcube-core roundcube/dbconfig-install boolean true" | debconf-set-selections
+	  # echo "roundcube-core roundcube/database-type select mysql" | debconf-set-selections
+	  # echo "roundcube-core roundcube/mysql/admin-pass password $CFG_MYSQL_ROOT_PWD" | debconf-set-selections
+	  # echo "roundcube-core roundcube/db/dbname string roundcube" | debconf-set-selections
+	  # echo "roundcube-core roundcube/mysql/app-pass password $CFG_ROUNDCUBE_PWD" | debconf-set-selections
+	  # echo "roundcube-core roundcube/app-password-confirm password $CFG_ROUNDCUBE_PWD" | debconf-set-selections
+	  # echo "roundcube-core roundcube/hosts string localhost" | debconf-set-selections
+	  # apt_install roundcube roundcube-core roundcube-mysql roundcube-plugins
 	  echo -n "Installing Webmail client Plugins (Roundcube)... "
 	  cd /tmp
 	  wget -q -O ispconfig3_roundcube.tgz https://github.com/w2c/ispconfig3_roundcube/tarball/master
