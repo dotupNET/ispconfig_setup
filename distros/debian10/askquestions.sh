@@ -52,6 +52,11 @@ AskQuestions() {
 		CFG_QUOTA=$(whiptail --title "Quota" --backtitle "$WT_BACKTITLE" --nocancel --radiolist "Setup user quota?" 10 50 2 "yes" "(default)" ON "no" "" OFF 3>&1 1>&2 2>&3)
 	done
 
+	while [[ ! "$CFG_FTP" =~ $RE ]]
+	do
+		CFG_QUOTA=$(whiptail --title "FTP" --backtitle "$WT_BACKTITLE" --nocancel --radiolist "Would you like to install FTP Server?" 10 50 2 "yes" "(default)" ON "no" "" OFF 3>&1 1>&2 2>&3)
+	done
+
 	while [[ ! "$CFG_ISPC" =~ $RE ]]
 	do
 		CFG_ISPC=$(whiptail --title "ISPConfig Setup" --backtitle "$WT_BACKTITLE" --nocancel --radiolist "Would you like full unattended setup of expert mode for ISPConfig?" 10 50 2 "standard" "(default)" ON "expert" "" OFF 3>&1 1>&2 2>&3)

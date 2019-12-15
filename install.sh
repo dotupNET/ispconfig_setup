@@ -271,7 +271,9 @@ if [ -f /etc/debian_version ]; then
 	InstallSQLServer 
 	if [ "$CFG_SETUP_WEB" == "yes" ] || [ "$CFG_MULTISERVER" == "no" ]; then
 		InstallWebServer
-		InstallFTP 
+		if [ "$CFG_FTP" == "yes" ]; then
+  		InstallFTP 
+    fi
 		if [ "$CFG_QUOTA" == "yes" ]; then
 			InstallQuota 
 		fi
