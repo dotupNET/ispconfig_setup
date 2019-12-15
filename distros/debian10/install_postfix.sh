@@ -4,13 +4,13 @@
 #---------------------------------------------------------------------
 InstallPostfix() {
   if [ -f /etc/init.d/sendmail ]; then
-	echo -n "Removing Sendmail... "
-	systemctl stop sendmail
-	hide_output update-rc.d -f sendmail remove
-	apt_remove sendmail
-	echo -e "[${green}DONE${NC}]\n"
+    echo -n "Removing Sendmail... "
+    systemctl stop sendmail
+    hide_output update-rc.d -f sendmail remove
+    apt_remove sendmail
+    echo -e "[${green}DONE${NC}]\n"
   fi
-  
+
   echo -n "Installing SMTP Mail server (Postfix)... "
   echo "postfix postfix/main_mailer_type select Internet Site" | debconf-set-selections
   echo "postfix postfix/mailname string $CFG_HOSTNAME_FQDN" | debconf-set-selections
