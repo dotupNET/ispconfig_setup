@@ -54,7 +54,7 @@ AskQuestions() {
 
 	while [[ ! "$CFG_FTP" =~ $RE ]]
 	do
-		CFG_QUOTA=$(whiptail --title "FTP" --backtitle "$WT_BACKTITLE" --nocancel --radiolist "Would you like to install FTP Server?" 10 50 2 "yes" "(default)" ON "no" "" OFF 3>&1 1>&2 2>&3)
+		CFG_FTP=$(whiptail --title "FTP" --backtitle "$WT_BACKTITLE" --nocancel --radiolist "Would you like to install FTP Server?" 10 50 2 "yes" "(default)" ON "no" "" OFF 3>&1 1>&2 2>&3)
 	done
 
 	while [[ ! "$CFG_ISPC" =~ $RE ]]
